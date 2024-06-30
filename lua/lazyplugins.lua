@@ -1,0 +1,132 @@
+return {
+
+    -- "github/copilot.vim",
+
+    'neovim/nvim-lspconfig',         -- Configurations for Nvim LSP (Language Server Protocol) client
+    'j-hui/fidget.nvim',             -- A plugin that provides a UI for showing LSP progress
+    'onsails/lspkind-nvim',          -- Adds pictograms to LSP completions for better visual identification
+    'glepnir/lspsaga.nvim',          -- A light-weight LSP plugin with a lot of UI enhancements for LSP features
+    'ray-x/go.nvim',                 -- Plugin for Go development, provides LSP and additional features specific to Go
+    'ray-x/guihua.lua',              -- GUI library for Neovim, used as a dependency for ray-x/go.nvim
+    'hrsh7th/cmp-nvim-lsp',          -- LSP source for nvim-cmp, enabling LSP-based completions
+    'hrsh7th/cmp-buffer',            -- Buffer source for nvim-cmp, enabling buffer-based completions
+    'hrsh7th/nvim-cmp',              -- Main autocompletion plugin
+    'saadparwaiz1/cmp_luasnip',      -- Luasnip source for nvim-cmp, enabling snippet completions using Luasnip
+    'windwp/nvim-ts-autotag',        -- Automatically close and rename HTML tags
+    'windwp/nvim-autopairs',         -- Automatically insert pairs of brackets, quotes, etc.
+    
+
+    "ellisonleao/gruvbox.nvim",
+
+    {
+        "nvim-tree/nvim-tree.lua",
+        version = "v1.1.1",
+        lazy = false,
+        dependencies = {
+        "nvim-tree/nvim-web-devicons",
+        },
+        config = function()
+        require("nvim-tree").setup {
+        git = {
+            ignore = false,
+        },
+        filters = {
+            dotfiles = false,
+        },
+        }
+        end,
+    },
+
+    {
+        'nvim-treesitter/nvim-treesitter',
+        lazy = false,
+        build = ":TSUpdate",
+        config = function ()
+          local configs = require('nvim-treesitter.configs')
+    
+          configs.setup({
+              ensure_installed = {
+                "tsx",
+                "toml",
+                "json",
+                "yaml",
+                "css",
+                "html",
+                "lua",
+                "markdown",
+                "markdown_inline",
+                "go",
+                "dockerfile",
+                "bash",
+                "c",
+                "vim",
+                "vimdoc",
+                "query",
+                "javascript",
+              },
+              sync_install = false,
+              highlight = { enable = true },
+              indent = { enable = true },  
+              auto_install = true,
+            })
+        end,
+      },
+
+      {
+        'nvim-telescope/telescope.nvim',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+      },
+
+      'nvim-telescope/telescope-file-browser.nvim',
+
+      {
+        'nvim-pack/nvim-spectre',
+        dependencies = { 'nvim-lua/plenary.nvim' }
+      },
+
+      'akinsho/nvim-bufferline.lua',
+
+      {
+        'ggandor/leap.nvim',
+        config = function()
+          require('leap').create_default_mappings()
+        end,
+      },
+
+      { 'junegunn/fzf', build = ':call fzf#install()' },
+
+      {
+        'lewis6991/gitsigns.nvim',
+        tag = 'v0.6',
+        config = function()
+          require('gitsigns').setup()
+        end,
+      },
+
+      {
+        'pwntester/octo.nvim',
+        dependencies = {
+          'nvim-lua/plenary.nvim',
+          'nvim-telescope/telescope.nvim',
+          'nvim-tree/nvim-web-devicons', -- optional, for file icons
+        },
+        config = function()
+          require("octo").setup()
+        end,
+      },
+
+      {
+        "kylechui/nvim-surround",
+        tag = "v1.0.0",
+        config = function()
+            require("nvim-surround").setup({})
+        end
+      },
+
+      {
+        "iamcco/markdown-preview.nvim",
+        build = function() vim.fn["mkdp#util#install"]() end,
+      },
+    
+
+}
