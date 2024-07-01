@@ -12,7 +12,10 @@ Thanks [ottingbob](https://github.com/ottingbob/nvim-setup/tree/main) :)
 - LSP hover: `,w` (in `INSERT` mode)
 - Switch windows: `<C-l>`, `<C-h>`, `<C-j>`, `<C-k>`
 - Exit out of terminal: `,x` (in `TERMINAL` mode)
-- Switch terminal tabs: `<C-a>h`, `<C-a>l` TODO NOT WORKING, FIX LOOK TOO
+- Switch tabs: `,;`, `,'`
+- Switch tab order: `,<`, `,>`
+- Close tab: `,x`
+- Pin tab: `,bp`
 - Split horizontal: `,t`
 - Split vertical: `,vt`
 - Open terminal tab: `,tn`

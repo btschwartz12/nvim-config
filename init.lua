@@ -25,20 +25,24 @@ vim.keymap.set('n', '<C-j>', '<C-w><C-j>', {noremap = true})
 vim.keymap.set('n', '<C-h>', '<C-w><C-h>', {noremap = true})
 
 -- Swap windows in terminal
-vim.keymap.set('t', '<C-l>', '<C-\\><C-n><C-w><C-l>')
-vim.keymap.set('t', '<C-k>', '<C-\\><C-n><C-w><C-k>')
-vim.keymap.set('t', '<C-j>', '<C-\\><C-n><C-w><C-j>')
-vim.keymap.set('t', '<C-h>', '<C-\\><C-n><C-w><C-h>')
+vim.keymap.set('t', '<C-l>', '<C-\\><C-n><C-w><C-l>', {noremap = true})
+vim.keymap.set('t', '<C-k>', '<C-\\><C-n><C-w><C-k>', {noremap = true})
+vim.keymap.set('t', '<C-j>', '<C-\\><C-n><C-w><C-j>', {noremap = true})
+vim.keymap.set('t', '<C-h>', '<C-\\><C-n><C-w><C-h>', {noremap = true})
 
 -- Tab navigation
-vim.keymap.set('t', '<C-a>h', '<cmd>tabprev<cr>')
-vim.keymap.set('t', '<C-a>l', '<cmd>tabnext<cr>')
+vim.keymap.set({'n', 't'}, '<leader>;', '<cmd>BufferPrevious<cr>', {noremap = true})
+vim.keymap.set({'n', 't'}, "<leader>'", '<cmd>BufferNext<cr>', {noremap = true})
+vim.keymap.set({'n', 't'}, '<leader><', '<cmd>BufferMovePrevious<cr>', {noremap = true})
+vim.keymap.set({'n', 't'}, '<leader>>', '<cmd>BufferMoveNext<cr>', {noremap = true})
+vim.keymap.set('n', '<leader>x', '<cmd>BufferClose<cr>', {noremap = true})
+vim.keymap.set('n', '<leader>bp', '<cmd>BufferPin<cr>', {noremap = true})
 
 -- Terminal
-vim.keymap.set('n', '<leader>t', '<cmd>set splitbelow | sp | resize 15 | startinsert | term<cr>')
-vim.keymap.set('n', '<leader>vt', '<cmd>vs | startinsert | term<cr>')
-vim.keymap.set('n', '<leader>tn', '<cmd>tabnew | startinsert | term<cr>')
-vim.keymap.set('t', '<leader>x', '<C-\\><C-n>')
+vim.keymap.set('n', '<leader>t', '<cmd>set splitbelow | sp | resize 15 | startinsert | term<cr>', {noremap = true})
+vim.keymap.set('n', '<leader>vt', '<cmd>vs | startinsert | term<cr>', {noremap = true})
+vim.keymap.set('n', '<leader>tn', '<cmd>tabnew | startinsert | term<cr>', {noremap = true})
+vim.keymap.set('t', '<leader>x', '<C-\\><C-n>', {noremap = true})
 
 -- Misc
 vim.keymap.set('n', '<leader>b', "<cmd>NvimTreeToggle<cr>", {noremap = true})
