@@ -1,6 +1,6 @@
 return {
 
-    -- "github/copilot.vim",
+    "github/copilot.vim",
 
     'neovim/nvim-lspconfig',         -- Configurations for Nvim LSP (Language Server Protocol) client
     'j-hui/fidget.nvim',             -- A plugin that provides a UI for showing LSP progress
@@ -104,29 +104,11 @@ return {
       },
 
       {
-        'pwntester/octo.nvim',
-        dependencies = {
-          'nvim-lua/plenary.nvim',
-          'nvim-telescope/telescope.nvim',
-          'nvim-tree/nvim-web-devicons', -- optional, for file icons
-        },
-        config = function()
-          require("octo").setup()
-        end,
-      },
-
-      {
-        "kylechui/nvim-surround",
-        tag = "v1.0.0",
-        config = function()
-            require("nvim-surround").setup({})
-        end
-      },
-
-      {
         "iamcco/markdown-preview.nvim",
         build = function() vim.fn["mkdp#util#install"]() end,
       },
+
+			'rcarriga/nvim-notify',
     
 
 }
