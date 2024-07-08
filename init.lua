@@ -36,7 +36,7 @@ vim.keymap.set({'n', 't'}, "<leader>'", '<cmd>BufferNext<cr>', {noremap = true})
 vim.keymap.set({'n', 't'}, '<leader><', '<cmd>BufferMovePrevious<cr>', {noremap = true})
 vim.keymap.set({'n', 't'}, '<leader>>', '<cmd>BufferMoveNext<cr>', {noremap = true})
 vim.keymap.set('n', '<leader>x', '<cmd>BufferClose<cr>', {noremap = true})
-vim.keymap.set('n', '<leader>bp', '<cmd>BufferPin<cr>', {noremap = true})
+vim.keymap.set('n', '<leader>fp', '<cmd>BufferPin<cr>', {noremap = true})
 
 -- Terminal
 vim.keymap.set('n', '<leader>t', '<cmd>set splitbelow | sp | resize 15 | startinsert | term<cr>', {noremap = true})
@@ -72,4 +72,5 @@ vim.diagnostic.config({
 vim.o.updatetime = 250
 vim.cmd("autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})")
 
+vim.opt.clipboard = ""
 
