@@ -83,4 +83,5 @@ require('lualine').setup {
 	}
 }
 
+require('leap').create_default_mappings()
 
