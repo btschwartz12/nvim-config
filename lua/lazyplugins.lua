@@ -123,7 +123,9 @@ return {
           },
           version = '^1.0.0', 
         },
-      }
-    
-
+      },
+      {
+					'nvim-lualine/lualine.nvim',
+					dependencies = { 'nvim-tree/nvim-web-devicons' }
+			}
 }

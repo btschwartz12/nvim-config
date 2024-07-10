@@ -64,6 +64,9 @@ vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({sele
 vim.keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', {noremap = true})
 vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {noremap = true})
 
+vim.opt.list = true
+vim.opt.listchars = { tab = '>-', trail = '·', extends = '>', precedes = '<', space = '·' }
+
 vim.cmd.colorscheme("gruvbox")
 
 vim.diagnostic.config({
@@ -73,4 +76,11 @@ vim.o.updatetime = 250
 vim.cmd("autocmd CursorHold,CursorHoldI * lua vim.diagnostic.open_float(nil, {focus=false})")
 
 vim.opt.clipboard = ""
+
+require('lualine').setup {
+	options = {
+		theme = 'gruvbox'
+	}
+}
+
 
