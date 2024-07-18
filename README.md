@@ -8,8 +8,21 @@ Thanks [ottingbob](https://github.com/ottingbob/nvim-setup/tree/main) :)
 
 - Toggle file explorer: `,b`
 - Save file: `,w`
+- Fuzzy-find file: `,p`
+- Live grep: `,fg`
+- Leap forward: `s{char-1}{char-2}`
+- Leap backward: `S{char-1}{char-2}`
+
+#### Misc binds
 - Insert comma: `,,`
-- LSP hover: `,w` (in `INSERT` mode)
+- Buffers: `,fb`
+- Help tags: `,fh`
+- Git branches: `,gb`
+- Git stuff: `:Gitsigns`
+- Surround words: `ysiw)`
+- Make strings: `ys$"`
+
+### Tabs/Windows binds
 - Switch windows: `<C-l>`, `<C-h>`, `<C-j>`, `<C-k>`
 - Exit out of terminal: `,x` (in `TERMINAL` mode)
 - Switch tabs: `,;`, `,'`
@@ -19,23 +32,9 @@ Thanks [ottingbob](https://github.com/ottingbob/nvim-setup/tree/main) :)
 - Split horizontal: `,t`
 - Split vertical: `,vt`
 - Open terminal tab: `,tn`
-- Fuzzy-find file: `,p`
-- Open file browser: `,ff`
-- Live grep: `,fg`
-- Buffers: `,fb`
-- Help tags: `,fh`
-- Git branches: `,gb`
-- Open find and replace: `,sw`
-- Open find and replace (current file only): `,sp`
-- Open spectre help: `?` (in `SPECTRE` mode)
-- Leap forward: `s{char-1}{char-2}`
-- Leap backward: `S{char-1}{char-2}`
-- Git stuff: `:Gitsigns`
-- Surround words: `ysiw)`
-- Make strings: `ys$"`
 
 ### `file_explorer` binds
-
+- Open file browser: `,ff`
 - Create file: `c`
 - Rename file: `r`
 - Delete file: `d`
@@ -47,7 +46,7 @@ Thanks [ottingbob](https://github.com/ottingbob/nvim-setup/tree/main) :)
 
 
 ### LSP binds
-
+- LSP hover: `,w` (in `INSERT` mode)
 - Open diagnostic when hovering over error: `<space>e`
 - Tab through diagnostics: `[d`, `]d`
 - Add diagnostics to loclist: `<space>q`
@@ -55,9 +54,6 @@ Thanks [ottingbob](https://github.com/ottingbob/nvim-setup/tree/main) :)
 - Remove a workspace folder: `<space>wr`
 - List all workspace folders: `<space>wl`
 - Show code actions: `<space>ca`
-
-
-TODO NEEDS TO BE FIXED
 - Jump to declaration: `gD`
 - Jump to definition: `gd`
 - Show references: `gr`
