@@ -117,3 +117,24 @@ vim.api.nvim_create_autocmd("BufWritePost", {
     -- vim.cmd("silent! !python -m ruff check --fix %")
   end
 })
+
+-- Configure diagnostic display
+vim.diagnostic.config({
+  virtual_text = true,  -- Enable virtual text
+  signs = true,         -- Show signs in the sign column
+  underline = true,     -- Underline the text with an error
+  update_in_insert = false,
+  severity_sort = true,
+})
+
+-- You can customize the format of the virtual text
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = '●', -- Could be '■', '▎', 'x'
+    spacing = 4,
+    source = "if_many",
+    severity = {
+      min = vim.diagnostic.severity.HINT,
+    },
+  },
+})

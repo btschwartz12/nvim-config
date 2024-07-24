@@ -58,12 +58,6 @@ vim.keymap.set('n', '<leader>fb', "<cmd>Telescope buffers<cr>", {noremap = true}
 vim.keymap.set('n', '<leader>fh', "<cmd>Telescope help_tags<cr>", {noremap = true})
 vim.keymap.set('n', '<leader>gb', "<cmd>Telescope git_branches<cr>", {noremap = true})
 
--- Spectre
-vim.keymap.set('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', {noremap = true})
-vim.keymap.set('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', {noremap = true})
-vim.keymap.set('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', {noremap = true})
-vim.keymap.set('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', {noremap = true})
-
 vim.opt.list = true
 vim.opt.listchars = { tab = '>-', trail = '·', extends = '>', precedes = '<', space = '·' }
 
