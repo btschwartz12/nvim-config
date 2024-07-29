@@ -12,6 +12,7 @@ Thanks [ottingbob](https://github.com/ottingbob/nvim-setup/tree/main) :)
 - Live grep: `,fg`
 - Leap forward: `s{char-1}{char-2}`
 - Leap backward: `S{char-1}{char-2}`
+- Comment line: `gcc`
 
 #### Misc binds
 - Insert comma: `,,`

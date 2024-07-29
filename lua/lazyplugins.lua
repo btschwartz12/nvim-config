@@ -156,5 +156,10 @@ return {
 						desc = "Buffer Local Keymaps (which-key)",
 					},
 				},
+			},
+			{
+				"numToStr/Comment.nvim",
+				opts = {
+				}
 			}
 }
