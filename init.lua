@@ -97,3 +97,30 @@ require("noice").setup({
     lsp_doc_border = false, -- add a border to hover docs and signature help
   },
 })
+
+vim.o.completeopt = "menuone,noselect"
+
+-- Set up nvim-cmp
+local cmp = require('cmp')
+
+cmp.setup({
+  mapping = cmp.mapping.preset.insert({
+    ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+    ['<C-f>'] = cmp.mapping.scroll_docs(4),
+    ['<C-Space>'] = cmp.mapping.complete(),
+    ['<C-e>'] = cmp.mapping.abort(),
+    ['<CR>'] = cmp.mapping.confirm({ select = true }),
+  }),
+  sources = cmp.config.sources({
+    { name = 'nvim_lsp' },
+    { name = 'buffer' },
+    { name = 'path' },
+  })
+})
+
+-- Set up lspconfig for Golang
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+require('lspconfig').gopls.setup{
+  capabilities = capabilities,
+}

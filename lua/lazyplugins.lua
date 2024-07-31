@@ -12,7 +12,9 @@ return {
     'hrsh7th/cmp-buffer',            -- Buffer source for nvim-cmp, enabling buffer-based completions
     'hrsh7th/nvim-cmp',              -- Main autocompletion plugin
     'saadparwaiz1/cmp_luasnip',      -- Luasnip source for nvim-cmp, enabling snippet completions using Luasnip
-    'windwp/nvim-ts-autotag',        -- Automatically close and rename HTML tags
+    'hrsh7th/cmp-path',              -- Path source for nvim-cmp, enabling path-based completions
+		'hrsh7th/cmp-cmdline',
+  	'windwp/nvim-ts-autotag',        -- Automatically close and rename HTML tags
     'windwp/nvim-autopairs',         -- Automatically insert pairs of brackets, quotes, etc.
     
 
