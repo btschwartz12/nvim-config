@@ -113,9 +113,38 @@ cmp.setup({
   }),
   sources = cmp.config.sources({
     { name = 'nvim_lsp' },
-    { name = 'buffer' },
+   	{ name = 'luasnip' }, 
+		{ name = 'buffer' },
     { name = 'path' },
   })
+})
+
+local luasnip = require('luasnip')
+
+-- Load snippets
+require("luasnip.loaders.from_vscode").lazy_load()
+
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
+  -- ... rest of your cmp configuration
+})
+
+local luasnip = require('luasnip')
+
+-- Load snippets
+require("luasnip.loaders.from_vscode").lazy_load()
+
+cmp.setup({
+  snippet = {
+    expand = function(args)
+      luasnip.lsp_expand(args.body)
+    end,
+  },
+  -- ... rest of your cmp configuration
 })
 
 -- Set up lspconfig for Golang

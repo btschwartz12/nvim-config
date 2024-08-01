@@ -1,6 +1,6 @@
 return {
 
-    "github/copilot.vim",
+    -- "github/copilot.vim",
 
     'neovim/nvim-lspconfig',         -- Configurations for Nvim LSP (Language Server Protocol) client
     'j-hui/fidget.nvim',             -- A plugin that provides a UI for showing LSP progress
@@ -16,7 +16,8 @@ return {
 		'hrsh7th/cmp-cmdline',
   	'windwp/nvim-ts-autotag',        -- Automatically close and rename HTML tags
     'windwp/nvim-autopairs',         -- Automatically insert pairs of brackets, quotes, etc.
-    
+   	'L3MON4D3/LuaSnip',
+	  'saadparwaiz1/cmp_luasnip',
 
     "ellisonleao/gruvbox.nvim",
 
