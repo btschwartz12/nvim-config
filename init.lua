@@ -47,7 +47,7 @@ vim.keymap.set('t', '<leader>x', '<C-\\><C-n>', {noremap = true})
 -- Misc
 vim.keymap.set('n', '<leader>b', "<cmd>NvimTreeToggle<cr>", {noremap = true})
 vim.keymap.set('n', '<leader>w', "<cmd>w %<cr>", {noremap = true}) 
-vim.keymap.set('n', '<leader>,', "i,<Esc>", {noremap = true}) 
+-- vim.keymap.set('n', '<leader>,', "i,<Esc>", {noremap = true}) 
 vim.keymap.set('i', '<leader>w', "<cmd>lua vim.lsp.buf.hover()<cr><cmd>lua vim.lsp.buf.hover()<cr>")
 
 -- Telescope
