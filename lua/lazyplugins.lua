@@ -1,6 +1,6 @@
 return {
 
-    -- "github/copilot.vim",
+    "github/copilot.vim",
 
     'neovim/nvim-lspconfig',         -- Configurations for Nvim LSP (Language Server Protocol) client
     'j-hui/fidget.nvim',             -- A plugin that provides a UI for showing LSP progress
