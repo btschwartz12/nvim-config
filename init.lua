@@ -17,7 +17,7 @@ require("lazy").setup('lazyplugins', {
 })
 
 require('lsp')
-
+ 
 -- Swap windows
 vim.keymap.set('n', '<C-l>', '<C-w><C-l>', {noremap = true})
 vim.keymap.set('n', '<C-k>', '<C-w><C-k>', {noremap = true})

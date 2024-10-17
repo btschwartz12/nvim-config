@@ -119,7 +119,19 @@ return {
         build = function() vim.fn["mkdp#util#install"]() end,
       },
 
-			'rcarriga/nvim-notify',
+			{
+				'rcarriga/nvim-notify',
+					config = function()
+						require("notify").setup({
+							stages = "fade",              -- Notification style (fade, slide, or static)
+							timeout = 1000,               -- Notification duration (1 second)
+							background_colour = "#000000", -- Background color for notifications
+							render = "compact",           -- Compact notifications
+							top_down = false,             -- Show notifications from the bottom
+						})
+						vim.notify = require("notify")   -- Set notify as default notification handler
+					end,
+			},
 
       {
         {'romgrk/barbar.nvim',
